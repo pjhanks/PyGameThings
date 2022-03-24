@@ -32,12 +32,13 @@ while True:
             pygame.quit()
             sys.exit()
 
-        ballRect = pygame.Rect(oBall.x, oBall.y, oBall.maxWidth, oBall.maxHeight)
+        #ballRect = pygame.Rect(oBall.x, oBall.y, oBall.maxWidth, oBall.maxHeight)
         if event.type == pygame.MOUSEBUTTONUP:
-            if ballRect.collidepoint(event.pos):
-                oBall.x = random.randrange(oBall.maxWidth)
-                oBall.y = random.randrange(oBall.maxHeight)
-                ballRect = pygame.Rect(oBall.x, oBall.y, oBall.maxWidth, oBall.maxHeight)
+            oBall.updateClick(event.pos)
+            # if ballRect.collidepoint(event.pos):
+            #     oBall.x = random.randrange(oBall.maxWidth)
+            #     oBall.y = random.randrange(oBall.maxHeight)
+            #     ballRect = pygame.Rect(oBall.x, oBall.y, oBall.maxWidth, oBall.maxHeight)
 
 
 

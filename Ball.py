@@ -41,5 +41,9 @@ class Ball():
         self.x = self.x + self.xSpeed
         self.y = self.y + self.ySpeed
 
+    def updateClick(self, coord):
+        self.x = coord[0]
+        self.y = coord[1]
+
     def draw(self):
         self.window.blit(self.image, (self.x, self.y))
